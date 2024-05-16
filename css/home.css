@@ -1,5 +1,5 @@
 #bodyHome {
-    background-image: url(../images/wallpaperHOME.png);
+    background-color: #561919;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -16,11 +16,12 @@
     left: 0;
 }*/
 h1 {
-    padding-top: 600px;
+    margin-top: 600px;
+    margin-bottom: 100px;
     z-index: 3;
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.30rem;
+    font-size: 1.90rem;
     position: sticky;
     color: whitesmoke;
 }
