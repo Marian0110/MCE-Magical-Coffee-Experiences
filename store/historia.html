@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MCE-Historia</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/validation.js"></script>
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/history.css">
@@ -28,7 +30,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link mx-lg-2" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link mx-lg-2" aria-current="page" href="../index.html" >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link mx-lg-2 " href="../store/nosotros.html">Nosotros</a>
@@ -45,7 +47,7 @@
           </ul>
         </div>
       </div>
-      <a href="../users/login.html" class="login-button">Iniciar Sesion</a>
+      <a href="../users/login.html" class="login-button" onclick="datoCafe()">Iniciar Sesion</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -54,7 +56,7 @@
   </nav>
   <!--END NAVBAR-->
    <!--SECCION HISTORIA-->
-   <div id="Hp1">
+   <div id="Hp1" onclick="datoCafe()">
     <div id="Hptext0">
       <h1>Explorando los Tesoros del Café Mundial</h1>
       <p>Sumérgete en un viaje de descubrimiento a través de los cafés más exquisitos y prestigiosos del mundo.<br>
@@ -76,7 +78,7 @@
   </div>
   <div id="Np4">
     <div id="Npimg4">
-      <img src="../images/cafecol.png">
+      <img src="../images/cafecol.png" onclick="datoCol()" >
     </div>
     <div id="Nptext4">
       <h3><br>Café Colombiano: Experiencia Suprema <br></h3>
@@ -91,7 +93,7 @@
   </div>
   <div id="Np3">
     <div id="Npimg3">
-      <img src="../images/cafeeti.png">
+      <img src="../images/cafeeti.png" onclick="datoEti()">
     </div>
     <div id="Nptext3" style="color: #E4E6E5;">
       <h3>Café Etíope: Sabor de las Tierras Altas<br></h3>
@@ -105,7 +107,7 @@
   </div>
   <div id="Np4">
     <div id="Npimg4">
-      <img src="../images/cafebra.png">
+      <img src="../images/cafebra.png" onclick="datoBra()">
     </div>
 
     <div id="Nptext4">
@@ -122,7 +124,7 @@
 
   <div id="Np3">
     <div id="Npimg3">
-      <img src="../images/cafecos.png">
+      <img src="../images/cafecos.png" onclick="datoCos()">
     </div>
     <div id="Nptext3" style="color:#E4E6E5">
       <h3><br>Café Costarricense: Tesoro de Tarrazú <br></h3>
@@ -138,7 +140,7 @@
 
   <div id="Np4">
     <div id="Npimg4">
-      <img src="../images/cafejam.png">
+      <img src="../images/cafejam.png" onclick="datoJam()">
     </div>
     <div id="Nptext4">
       <h3><br>Café Jamaicano: Elegancia Caribeña <br></h3>
@@ -154,7 +156,7 @@
 
   <div id="Np3">
     <div id="Npimg3">
-      <img src="../images/cafeken.png">
+      <img src="../images/cafeken.png" onclick="datoKen()">
     </div>
     <div id="Nptext3" style="color: #E4E6E5;">
       <h3><br>Café Keniano: Tesoro Africano <br></h3>
@@ -170,7 +172,7 @@
 
   <div id="Np4">
     <div id="Npimg4">
-      <img src="../images/cafegua.png">
+      <img src="../images/cafegua.png" onclick="datoGua()">
     </div>
     <div id="Nptext4">
       <h3><br>Café Guatemalteco: Legado Volcánico <br></h3>
