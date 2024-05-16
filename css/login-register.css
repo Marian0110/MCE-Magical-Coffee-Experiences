@@ -4,11 +4,7 @@
     border-radius: 20px;
 }
 
-#body-login {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #561919;
-}
-#body-register{
+#body-login, #body-register {
     background-color: #561919;
 }
 
@@ -41,6 +37,26 @@
     .right-box{
         padding: 20px;
     }
+}
 
+#submerged {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20px;
+}
+#area {
+    background-color: rgba(230,213,196,255);
+}
+
+#verify {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-weight: 700; 
+    text-align: center
+}
+
+.header-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
