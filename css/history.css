@@ -47,3 +47,9 @@
     font-family:fantasy;
     font: size 70px;
 }
+
+#clickeame {
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(6, 127, 132);
+}
