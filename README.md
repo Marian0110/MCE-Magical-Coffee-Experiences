@@ -14,7 +14,7 @@ Este proyecto es una página web dedicada a la importación y exportación de pr
 - **Inicio de sesión (Sign In):** Inicie sesión en su cuenta existente para acceder a características exclusivas.
 - **Registro (Sign Up):** Cree una nueva cuenta para comenzar a disfrutar de todos los beneficios de MCE.
 
-# Cntribuciones
+# Contribuciones
 ¡Agradecemos sus contribuciones para mejorar MCE - Magical Coffee Experiences! Si tiene ideas, sugerencias de mejora o encuentra algún problema, no dude en abrir un issue o enviar un pull request.
 
 ¡Gracias por visitar MCE - Magical Coffee Experiences y por ser parte de nuestras experiencias mágicas con el café!
