@@ -1,27 +1,10 @@
-function login() {
-    Swal.fire({
-        title: '¡Bienvenido!',
-        text: 'Credenciales correctas',
-        icon: 'success',
-        confirmButtonText: 'OK'
-    });
-}
-
-function singIn () {
-    Swal.fire({
-        title: 'Registro Exitoso',
-        text: '¡Tu registro ha sido completado con éxito!',
-        icon: 'success',
-        confirmButtonText: 'OK'
-  });
-}
 
 function datoCafe() {
     Swal.fire({
         title: 'Sabias que...',
         text: 'En el siglo XVII, el café en Europa fue tan popular que surgió un "Club de los Cafeteros", donde los clientes debían pagar una tarifa de membresía para disfrutar de la bebida y participar en debates intelectuales.',
         icon: 'info',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'Interesante '
     });
 };
 
@@ -30,7 +13,7 @@ function datoCol() {
         title: 'Sabias que...',
         text: 'El café colombiano es conocido por ser uno de los productos de exportación más importantes del país. La región montañosa y los métodos de cultivo únicos contribuyen a su calidad excepcionalmente alta.',
         icon: 'info',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'WOW'
     });
 }
 
@@ -39,7 +22,7 @@ function datoEti() {
         title: 'Sabias que...',
         text: 'El café etíope es conocido por ser el lugar de origen del café arábica, una de las especies más populares y apreciadas en todo el mundo.',
         icon: 'info',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'Genial'
     });
 }
 
@@ -48,7 +31,7 @@ function datoBra() {
         title: 'Sabias que...',
         text: 'Brasil es el mayor productor de café del mundo desde el siglo XIX y es conocido por sus vastas plantaciones de café, especialmente en el estado de Minas Gerais.',
         icon: 'info',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'WOW'
     });
 }
 
@@ -66,7 +49,7 @@ function datoJam() {
         title: 'Sabias que...',
         text: 'El café Blue Mountain de Jamaica es uno de los granos de café más exclusivos y costosos del mundo, conocido por su suavidad y sabor distintivo.',
         icon: 'info',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'Genial'
     });
 }
 
@@ -75,7 +58,7 @@ function datoKen() {
         title: 'Sabias que...',
         text: 'En Kenia, el café se cultiva principalmente en las laderas del Monte Kenia y en las Tierras Altas de Aberdare.',
         icon: 'info',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'No sabia'
     });
 }
 
@@ -84,7 +67,7 @@ function datoGua() {
         title: 'Sabias que...',
         text: 'Guatemala es uno de los pocos países que cultiva café Arábica, que es conocido por su sabor suave y complejo, así como café Robusta, que es más amargo y tiene más cafeína.',
         icon: 'info',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'Super'
     });
 }
 
