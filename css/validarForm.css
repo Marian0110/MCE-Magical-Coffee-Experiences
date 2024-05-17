@@ -1,0 +1,8 @@
+.error-container {
+    height: 70px; /* Altura fija para el contenedor de mensaje de error */
+  }
+  
+  .error {
+    display: none; /* Oculta los mensajes de error por defecto */
+    color: red; /* Color del texto de error */
+  }
