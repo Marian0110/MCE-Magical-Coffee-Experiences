@@ -18,7 +18,7 @@ $(document).ready(function () {
 
         var email = $('#emailRegistro').val();
 
-        if (email == "") {
+        if (email == '') {
             $('#messageEmail').text('El campo de correo no puede estar vacío').fadeIn();
             return false;
         } else if (!isEmail(email)) {
@@ -28,7 +28,7 @@ $(document).ready(function () {
             $('#messageEmail').fadeOut();
         }
 
-        if (passwordRegister === "") {
+        if (passwordRegister == '') {
             $('#messagePassword').text('La contraseña no puede estar vacía').fadeIn();
             return false;
         } else if (!isPass(passwordRegister)) {
@@ -38,7 +38,7 @@ $(document).ready(function () {
             $('#messagePassword').fadeOut();
         }
 
-        if (verifyPassword == "") {
+        if (verifyPassword == '') {
             $('#messageConfirm').text('Confirma la contraseña').fadeIn();
             return false;
         } else if (verifyPassword !== passwordRegister) {
@@ -61,7 +61,7 @@ $(document).ready(function () {
             text: '¡Tu registro ha sido completado con éxito!',
             icon: 'success',
             confirmButtonText: 'Iniciar Sesión',
-            timer: 7000
+            timer: 6000
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location.href = '../users/login.html';

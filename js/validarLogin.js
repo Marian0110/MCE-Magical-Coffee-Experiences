@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     var password = $('#password').val();
 
-    if (password == "") {
+    if (password == '') {
       $('#messagePass').text('La contraseña no puede estar vacía').fadeIn();
       return false;
     } else if (!passwordRegex.test(password)) {
@@ -41,12 +41,13 @@ $(document).ready(function () {
         //$('#btnLogin').prop('disabled', false); 
       }
     });
-    $("#username").on("input", function () {
+    $('#username').on('input', function () {
       var username = $(this).val();
       if (username.length > 20) {
         $(this).val(username.substr(0, 20));
-        alert("Solo se permiten 20 caracteres");
+        alert('Solo se permiten 20 caracteres');
       }
+      
     });
   });
 });
