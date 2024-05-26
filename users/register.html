@@ -75,37 +75,37 @@
               <p>Registrate para ser parte de nuestra comunidad cafétera.</p>
           </div>
           <!--INICIO FORM-->
-          <form action="#" name="registrar-data-personal"> <!--method="post" enctype="multipart/form-data" -->
+          <form id="form-register" action="#" name="registro-data-personal"> <!--method="post" enctype="multipart/form-data" -->
             <div class="input-group mb-2">
               <input id="usuarioRegistro" type="text" class="form-control form-control-lg bd-light fs-6"
-                placeholder="Nombre de usuario" required>
+                placeholder="Nombre de usuario" >
             </div>
             <div id="messageUsuario" class="error"></div>
             <div class="input-group mb-2">
               <input id="emailRegistro" type="text" class="form-control form-control-lg bd-light fs-6"
-                placeholder="Ingresa tu e-mail" required>
+                placeholder="Ingresa tu e-mail" >
             </div>
             <div id="messageEmail" class="error"></div>
             <div class="input-group mb-2">
               <input id="pass" type="password" class="form-control form-control-lg bd-light fs-6"
-                placeholder="Ingresa tu contraseña" required>
+                placeholder="Ingresa tu contraseña" >
             </div>
             <div id="messagePassword" class="error"></div>
             <div class="input-group mb-2">
               <input id="verifyPass" type="password" class="form-control form-control-lg bd-light fs-6"
-                placeholder="Confirmar contraseña" required>
+                placeholder="Confirmar contraseña" >
             </div>
             <div id="messageConfirm" class="error"></div>
             <div class="input-group mb-3 d-flex justify-content-between ">
               <div class="form-check">
-                <input id="formCheck" type="checkbox" class="form-check-input" required>
+                <input id="formCheck" type="checkbox" class="form-check-input">
                 <label for="formCheck" class="for-check-label text-secondary"><small>Aceptar terminos y
                     condiciones</small></label>
                 <div id="checkeado" class="error"></div>
               </div>
             </div>
             <div class="input-group mb-3">
-              <button id="btnRegistro" type="submit" class="btn btn-lg btn-primary w-100 fs-6">Registrarse</button>
+              <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Registrarse</button>
             </div>
             <div id="backLogin" class="text-center">
               <a href="login.html" style="text-decoration: none;">Volver a Iniciar Sesión</a>
@@ -129,6 +129,7 @@
   <!--CDN JQUERY-->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!--SCRIPT VALIDACION REGISTRO-->
   <script src="../js/validarRegistro.js"></script>
 </body>

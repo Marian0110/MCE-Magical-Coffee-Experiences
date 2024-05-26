@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $('#btnRegistro').click(function (event) {
-        event.preventDefault(); 
+    $('#form-register').submit(function (e) {
+        e.preventDefault();
         var passwordRegister = $("#pass").val();
         var verifyPassword = $("#verifyPass").val();
         var user = $('#usuarioRegistro').val();
@@ -45,7 +45,7 @@ $(document).ready(function () {
             $('#messageConfirm').text('La contraseña debe ser la misma').fadeIn();
             return false;
         } else {
-            $('#messageConfirm').fadeOut();    
+            $('#messageConfirm').fadeOut();
         }
 
         if (!$('#formCheck').prop('checked')) {
@@ -63,9 +63,10 @@ $(document).ready(function () {
             confirmButtonText: 'Iniciar Sesión',
             timer: 7000
         }).then((result) => {
-            $('form').submit(); 
             if (result.isConfirmed) {
                 window.location.href = '../users/login.html';
+            } else {
+                $('form').unbind('submit').submit();
             }
         });
     });
