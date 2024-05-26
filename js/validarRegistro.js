@@ -21,10 +21,13 @@ $(document).ready(function () {
         if (email == '') {
             $('#messageEmail').text('El campo de correo no puede estar vacío').fadeIn();
             return false;
-        } else if (!isEmail(email)) {
+        }else if(email.indexOf(' ') >= 0){
+            $('#messageEmail').text('El correo electrónico no puede contener espacios').fadeIn();
+            return false;
+        }else if (!isEmail(email)) {
             $('#messageEmail').text('El correo electrónico no es válido, ocupa @ y dominio').fadeIn();
             return false;
-        } else {
+        }else {
             $('#messageEmail').fadeOut();
         }
 
