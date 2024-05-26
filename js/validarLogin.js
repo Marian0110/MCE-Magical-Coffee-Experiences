@@ -1,17 +1,7 @@
 $(document).ready(function () {
-  var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[./@-]).{8,}$/;
-
-  $("#username").on("input", function () {
-    var username = $(this).val();
-    if (username.length > 20) {
-      $(this).val(username.substr(0, 20));
-      alert("Solo se permiten 20 caracteres");
-    }
-  });
-
-  $('#btnEnviar').click(function (e) {
+  $('#form-login').submit(function (e) {
     e.preventDefault();
-    
+    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[./@-]).{8,}$/;
     var username = $('#username').val();
 
     if (username.length < 5 || username.length > 20) {
@@ -36,6 +26,14 @@ $(document).ready(function () {
       $('#messagePass').fadeOut();
     }
 
+    $("#username").on("input", function () {
+      var username = $(this).val();
+      if (username.length > 20) {
+        $(this).val(username.substr(0, 20));
+        alert("Solo se permiten 20 caracteres");
+      }
+    });
+
     Swal.fire({
       title: '¡Bienvenido!',
       text: 'Credenciales correctas',
@@ -47,9 +45,5 @@ $(document).ready(function () {
         window.location.href = '../index.html';
       }
     });
-
-    setTimeout(function(){
-      $('form').submit();
-    }, 6000);
   });
 });
