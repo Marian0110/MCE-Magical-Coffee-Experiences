@@ -26,23 +26,26 @@ $(document).ready(function () {
       $('#messagePass').fadeOut();
     }
 
-    $("#username").on("input", function () {
-      var username = $(this).val();
-      if (username.length > 20) {
-        $(this).val(username.substr(0, 20));
-        alert("Solo se permiten 20 caracteres");
-      }
-    });
+    $('#btnLogin').prop('disabled', true);
 
     Swal.fire({
       title: '¡Bienvenido!',
       text: 'Credenciales correctas',
       icon: 'success',
       confirmButtonText: 'CONTINUAR',
-      timer: 6000
+      timer: 3000
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.href = '../index.html';
+      }else{
+        //$('#btnLogin').prop('disabled', false); 
+      }
+    });
+    $("#username").on("input", function () {
+      var username = $(this).val();
+      if (username.length > 20) {
+        $(this).val(username.substr(0, 20));
+        alert("Solo se permiten 20 caracteres");
       }
     });
   });
