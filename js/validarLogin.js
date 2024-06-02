@@ -1,8 +1,8 @@
 $(document).ready(function () {
   $('#form-login').submit(function (e) {
     e.preventDefault();
-    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[./@-]).{8,}$/;
-    var username = $('#username').val();
+    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[./@-]).{8,}$/;
+    let username = $('#username').val();
 
     if (username.length < 5 || username.length > 20) {
       $('#messageLogin').text('Ingresa tu nombre de usuario (debe tener entre 5 y 20 caracteres)').fadeIn();
@@ -14,7 +14,7 @@ $(document).ready(function () {
       $('#messageLogin').fadeOut();
     }
 
-    var password = $('#password').val();
+    let password = $('#password').val();
 
     if (password == '') {
       $('#messagePass').text('La contraseña no puede estar vacía').fadeIn();
@@ -42,7 +42,7 @@ $(document).ready(function () {
       }
     });
     $('#username').on('input', function () {
-      var username = $(this).val();
+      let username = $(this).val();
       if (username.length > 20) {
         $(this).val(username.substr(0, 20));
         alert('Solo se permiten 20 caracteres');

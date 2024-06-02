@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $('#form-register').submit(function (e) {
         e.preventDefault();
-        var passwordRegister = $("#pass").val();
-        var verifyPassword = $("#verifyPass").val();
-        var user = $('#usuarioRegistro').val();
-        var userTrim = $.trim(user);
+        let passwordRegister = $("#pass").val();
+        let verifyPassword = $("#verifyPass").val();
+        let user = $('#usuarioRegistro').val();
+        let userTrim = $.trim(user);
 
         if (userTrim.length < 5 || userTrim.length > 20) {
             $('#messageUsuario').text('Ingresa tu nombre de usuario (debe tener entre 5 y 20 caracteres)').fadeIn();
@@ -16,18 +16,18 @@ $(document).ready(function () {
             $('#messageUsuario').fadeOut();
         }
 
-        var email = $('#emailRegistro').val();
+        let email = $('#emailRegistro').val();
 
         if (email == '') {
             $('#messageEmail').text('El campo de correo no puede estar vacío').fadeIn();
             return false;
-        }else if(email.indexOf(' ') >= 0){
+        } else if (email.indexOf(' ') >= 0) {
             $('#messageEmail').text('El correo electrónico no puede contener espacios').fadeIn();
             return false;
-        }else if (!isEmail(email)) {
+        } else if (!isEmail(email)) {
             $('#messageEmail').text('El correo electrónico no es válido, ocupa @ y dominio').fadeIn();
             return false;
-        }else {
+        } else {
             $('#messageEmail').fadeOut();
         }
 
@@ -75,12 +75,12 @@ $(document).ready(function () {
     });
 
     function isEmail(emailTrim) {
-        var emailRegex = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
+        const emailRegex = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
         return emailRegex.test(emailTrim);
     }
 
     function isPass(pass) {
-        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[./@-]).{8,}$/;
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[./@-]).{8,}$/;
         return passwordRegex.test(pass);
     }
 });
