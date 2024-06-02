@@ -39,12 +39,12 @@ h1 {
 #carouselExampleCaptions {
     position: absolute;
     width: 100%;
-    top: 100px; /* Ajusta esto según sea necesario */
+    top: 100px; 
     z-index: 2; 
 }
 
 .carousel-item img {
     width: auto; 
-    height: 380px;
+    height: 500px;
     object-fit: scale-down; 
   }
