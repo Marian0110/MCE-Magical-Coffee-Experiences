@@ -6,6 +6,9 @@ $(document).ready(function () {
         let user = $('#usuarioRegistro').val();
         let userTrim = $.trim(user);
 
+        let codCountry = $('#codPais').val();
+        let phone = $('#phone').val();
+
         if (userTrim.length < 5 || userTrim.length > 20) {
             $('#messageUsuario').text('Ingresa tu nombre de usuario (debe tener entre 5 y 20 caracteres)').fadeIn();
             return false;
@@ -31,6 +34,13 @@ $(document).ready(function () {
             $('#messageEmail').fadeOut();
         }
 
+        if (phone !== "" && codCountry === "+56" && !isChile(phone)) {
+            $('#messagePhone').text('El número móvil de Chile comienza con 9').fadeIn();
+            return false;
+        } else {
+            $('#messagePhone').fadeOut();
+        }
+
         if (passwordRegister == '') {
             $('#messagePassword').text('La contraseña no puede estar vacía').fadeIn();
             return false;
@@ -45,19 +55,18 @@ $(document).ready(function () {
             $('#messageConfirm').text('Confirma la contraseña').fadeIn();
             return false;
         } else if (verifyPassword !== passwordRegister) {
-            $('#messageConfirm').text('La contraseña debe ser la misma').fadeIn();
+            $('#messageConfirm').text('La contraseñas deben coincidir').fadeIn();
             return false;
         } else {
             $('#messageConfirm').fadeOut();
         }
 
         if (!$('#formCheck').prop('checked')) {
-            $('#checkeado').text('Debes aceptar los términos y condiciones para continuar').fadeIn();
+            $('#checkeado').text('Acepta los términos y condiciones para continuar').fadeIn();
             return false;
         } else {
             $('#checkeado').fadeOut();
         }
-
         // Alerta Sweet
         Swal.fire({
             title: 'Registro Exitoso',
@@ -83,4 +92,16 @@ $(document).ready(function () {
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[./@-]).{8,}$/;
         return passwordRegex.test(pass);
     }
+
+    function isChile(phone) {
+        const phoneRegex = /^9\d{8}$/;
+        return phoneRegex.test(phone);
+    }
+
+    $('#phone').on('input', function () {
+        let phone = $(this).val();
+        if (phone.length > 9) {
+          $(this).val(phone.substr(0, 9));
+        }
+      });
 });
